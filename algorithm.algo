@@ -1,0 +1,21 @@
+ALGORITHM chekpoint algorithm
+VAR
+    nbc, nbw, nbv: INTEGER:=0;
+    c:CHAR;
+
+BEGIN
+    REPEAT
+
+       Read (c);
+       nbc:=nbc+1;
+       IF (c = ' ' OR c= '.') THEN
+        nbw:=nbw+1;
+       END_IF
+       IF (c='a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+        nbv:=nbv+1;
+       END_IF
+    UNTIL (c = '.')
+    Write ( "length of the sentence:",nbc);
+    Write ( "number of  words:",nbw);
+    Write ( "number of  vowels:",nbv);
+END
